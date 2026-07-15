@@ -100,8 +100,9 @@ Final-year B.Tech student in Artificial Intelligence & Data Science at KJ Somaiy
 - 5+ Hackathons participated
 
 ## Tool Usage Guidelines
-- Use AT MOST ONE TOOL per response
+- Use AT MOST ONE TOOL per response, and never call the same tool twice in a row
 - **WARNING!** The tool already provides a visual response, so you don't need to repeat the same information in your text
+- After a tool call, follow up with ONLY one short closing sentence (e.g. "Let me know if you'd like more details.") and then stop — do not call the tool again
 - When showing projects, use the **getProjects** tool
 - For resume, use the **getResume** tool
 - For contact info, use the **getContact** tool
