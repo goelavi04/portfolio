@@ -16,11 +16,11 @@ import {
   ChevronUp,
   CircleEllipsis,
   CodeIcon,
+  GraduationCap,
   GraduationCapIcon,
   Laugh,
   Layers,
   MailIcon,
-  PartyPopper,
   Sparkles,
   UserRoundSearch,
   UserSearch,
@@ -38,28 +38,25 @@ const questions = {
   Me: 'Who are you? I want to know more about you.',
   Projects: 'What are your projects? What are you working on right now?',
   Skills: 'What are your skills? Give me a list of your soft and hard skills.',
-  Fun: "What the craziest thing you've ever done? (mb?) What are your hobbies? ",
-  Contact:
-    'How can I reach you? What kind of project would make you say "yes" immediately?',
+  Experience: 'What is your work experience and educational background?',
+  Contact: 'How can I reach you?',
 };
 
 const questionConfig = [
   { key: 'Me', color: '#329696', icon: Laugh },
   { key: 'Projects', color: '#3E9858', icon: BriefcaseBusiness },
   { key: 'Skills', color: '#856ED9', icon: Layers },
-  { key: 'Fun', color: '#B95F9D', icon: PartyPopper },
+  { key: 'Experience', color: '#B95F9D', icon: GraduationCap },
   { key: 'Contact', color: '#C19433', icon: UserRoundSearch },
 ];
 
 // Helper drawer data
 const specialQuestions = [
-  'Mountain Bike you said?? Show me!',
   'Who are you?',
   'Can I see your resume?',
   'What projects are you most proud of?',
   'What are your skills?',
   'How can I reach you?',
-  "What's the craziest thing you've ever done?",
 ];
 
 const questionsByCategory = [
@@ -69,9 +66,7 @@ const questionsByCategory = [
     icon: UserSearch,
     questions: [
       'Who are you?',
-      'What are your passions?',
-      'How did you get started in tech?',
-      'Where do you see yourself in 5 years?',
+      'How did you get started in AI/ML?',
     ],
   },
   {
@@ -82,7 +77,6 @@ const questionsByCategory = [
       'Can I see your resume?',
       'What makes you a valuable team member?',
       'Where are you working now?',
-      'Why should I hire you?',
       "What's your educational background?",
     ],
   },
@@ -98,27 +92,15 @@ const questionsByCategory = [
     icon: GraduationCapIcon,
     questions: [
       'What are your skills?',
-      'How was your experience at École 42?',
-    ],
-  },
-  {
-    id: 'fun',
-    name: 'Fun',
-    icon: PartyPopper,
-    questions: [
-      'Mountain Bike you said?? Show me!',
-      "What's the craziest thing you've ever done?",
-      'Mac or PC?',
-      'What are you certain about that 90% get wrong?',
+      'What certifications do you have?',
     ],
   },
   {
     id: 'contact',
-    name: 'Contact & Future',
+    name: 'Contact',
     icon: MailIcon,
     questions: [
       'How can I reach you?',
-      "What kind of project would make you say 'yes' immediately?",
       'Where are you located?',
     ],
   },

@@ -3,7 +3,6 @@ import { cn } from '@/lib/utils';
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Script from 'next/script';
 import './globals.css';
 
 // Load Inter font for non-Apple devices
@@ -13,43 +12,41 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Toukoum Portfolio',
+  title: 'Aviral Goel | AI/ML Engineer',
   description:
-    'Interactive portfolio with an AI-powered Memoji that answers questions about me, my skills, and my experience',
+    'Interactive AI-powered portfolio of Aviral Goel — AI/ML Engineer specializing in Speech AI, Agentic Systems & Applied Deep Learning. Ask questions and get answers grounded in his real background.',
   keywords: [
-    'Toukoum',
+    'Aviral Goel',
     'Portfolio',
-    'Developer',
-    'AI',
+    'AI/ML Engineer',
+    'Speech AI',
+    'Agentic Systems',
+    'Deep Learning',
     'Interactive',
-    'Memoji',
     'Web Development',
-    'Full Stack',
     'Next.js',
     'React',
   ],
   authors: [
     {
-      name: 'Toukoum',
-      url: 'https://toukoum.fr',
+      name: 'Aviral Goel',
+      url: 'https://github.com/goelavi04',
     },
   ],
-  creator: 'Toukoum',
+  creator: 'Aviral Goel',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://toukoum.fr',
-    title: 'Toukoum Portfolio',
+    title: 'Aviral Goel | AI/ML Engineer',
     description:
-      'Interactive portfolio with an AI-powered Memoji that answers questions about me',
-    siteName: 'Toukoum Portfolio',
+      'Interactive AI-powered portfolio that answers questions about Aviral Goel, grounded in his real background.',
+    siteName: 'Aviral Goel Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Toukoum Portfolio',
+    title: 'Aviral Goel | AI/ML Engineer',
     description:
-      'Interactive portfolio with an AI-powered Memoji that answers questions about me',
-    creator: '@toukoum',
+      'Interactive AI-powered portfolio that answers questions about Aviral Goel, grounded in his real background.',
   },
   icons: {
     icon: [
@@ -76,13 +73,6 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
         <link rel="icon" href="/favicon.svg" sizes="any" />
-        <Script
-          defer
-          data-website-id="68e067ba369b1b7f1f096056"
-          data-domain="toukoum.fr"
-          data-allow-localhost="true"
-          src="https://datafa.st/js/script.js"
-        ></Script>
       </head>
       <body
         className={cn(

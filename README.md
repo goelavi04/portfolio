@@ -1,41 +1,21 @@
-![image](assets/readme-photo.png)
- 
-# World's first AI portfolio 🤖✨  
+# Aviral Goel — AI Portfolio
 
-**Static portfolios are dead.**  
-So I built [toukoum.fr](https://toukoum.fr).
+An interactive, AI-chat-driven portfolio. Instead of scrolling, visitors ask questions and an AI avatar answers using my real background, skills, experience, and projects.
 
-Instead of making you scroll endlessly, my portfolio adapts to *you*.  
-Ask a question — my AI avatar replies instantly.
+Built on the [toukoum/portfolio](https://github.com/toukoum/portfolio) template, customized with my own content and switched to run on [Groq](https://groq.com) (Llama 3.3 70B) instead of OpenAI.
 
-## 👇 What can you ask?
-
-- 🧠 **Tech recruiter?** Ask about my stack & results  
-- 💻 **Dev?** Dive into my code & mindset  
-- 🧑‍🤝‍🧑 **Friend or family?** See what I’ve been working on  
-
----
-
-This is not a portfolio.  
-It’s a **conversation tailored to your curiosity**.
-
-➡️ **Try it now:** [https://toukoum.fr](https://toukoum.fr)  
-*What will you ask?*
-
-## 🚀 How to run
-
-Want to run this project locally? Here's what you need:
+## How to run
 
 ### Prerequisites
 - **Node.js** (v18 or higher)
 - **pnpm** package manager
-- **OpenAI API token** (for AI chat functionality)
-- **GitHub token** (for GitHub integration features)
+- **Groq API key** (for AI chat functionality) — get one free at [console.groq.com/keys](https://console.groq.com/keys)
+- **GitHub token** (optional, for the GitHub star-count integration)
 
 ### Setup
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/goelavi04/portfolio.git
    cd portfolio
    ```
 
@@ -45,9 +25,9 @@ Want to run this project locally? Here's what you need:
    ```
 
 3. **Environment variables**
-   Create a `.env` file in the root directory:
+   Create a `.env.local` file in the root directory:
    ```env
-   OPENAI_API_KEY=your_openai_api_key_here
+   GROQ_API_KEY=your_groq_api_key_here
    GITHUB_TOKEN=your_github_token_here
    ```
 
@@ -58,13 +38,3 @@ Want to run this project locally? Here's what you need:
 
 5. **Open your browser**
    Navigate to `http://localhost:3000`
-
-### Getting your **tokens**
-- **OpenAI API Key**: Get it from [platform.openai.com](https://platform.openai.com/api-keys)
-- **GitHub Token**: Generate one at [github.com/settings/tokens](https://github.com/settings/personal-access-tokens) with repo access
-
-
-
-#### 🔖 Tags
-
-`#AIPortfolio` `#InnovationInTech` `#DigitalResume` `#JobSearch` `#TechInnovation` `#WebDevelopment` `#FutureTech`

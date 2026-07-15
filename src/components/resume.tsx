@@ -8,13 +8,12 @@ import Image from 'next/image';
 export function Resume() {
   // Resume details
   const resumeDetails = {
-    title: "Raphael's Resume",
-    description: 'Full Stack Developer • AI Specialist',
+    title: "Aviral's Resume",
+    description: 'AI/ML Engineer • Speech AI & Agentic Systems',
     fileType: 'PDF',
-    lastUpdated: 'March 2025',
-    fileSize: '0.5 MB',
-    previewImageSrc: '/resume_giraud_preview.png',
-    downloadUrl: '/resume_giraud.pdf',
+    lastUpdated: 'Jul 2026',
+    previewImageSrc: '/resume_aviral_preview.png',
+    downloadUrl: '/resume_aviral.pdf',
   };
 
   const handleDownload = () => {
@@ -51,8 +50,6 @@ export function Resume() {
                 <span>{resumeDetails.fileType}</span>
                 <span className="mx-2">•</span>
                 <span>Updated {resumeDetails.lastUpdated}</span>
-                <span className="mx-2">•</span>
-                <span>{resumeDetails.fileSize}</span>
               </div>
             </div>
 

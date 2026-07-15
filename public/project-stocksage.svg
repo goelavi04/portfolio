@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="900" viewBox="0 0 700 900">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c2d12"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="900" fill="url(#g)"/>
+  <text x="60" y="460" fill="#ffffff" font-family="Arial, sans-serif" font-size="52" font-weight="700">StockSage</text>
+  <text x="60" y="510" fill="#fde68a" font-family="Arial, sans-serif" font-size="24">AI Stock Analysis Platform</text>
+</svg>
