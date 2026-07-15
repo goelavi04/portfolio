@@ -8,8 +8,10 @@ import {
   ArrowRight,
   BriefcaseBusiness,
   GraduationCap,
+  Languages,
   Laugh,
   Layers,
+  Trophy,
   UserRoundSearch,
 } from 'lucide-react';
 import Image from 'next/image';
@@ -31,6 +33,14 @@ const questionConfig = [
   { key: 'Skills', color: '#856ED9', icon: Layers },
   { key: 'Experience', color: '#B95F9D', icon: GraduationCap },
   { key: 'Contact', color: '#C19433', icon: UserRoundSearch },
+] as const;
+
+/* ---------- highlights strip data ---------- */
+const highlights = [
+  { value: '9.1', label: 'CGPA', color: '#B95F9D', icon: GraduationCap },
+  { value: '11', label: 'Indic languages in TTS work', color: '#329696', icon: Languages },
+  { value: '4', label: 'Live shipped projects', color: '#3E9858', icon: Layers },
+  { value: '5+', label: 'Hackathons', color: '#C19433', icon: Trophy },
 ] as const;
 
 /* ---------- component ---------- */
@@ -171,6 +181,22 @@ export default function Home() {
                 <span className="text-xs font-medium sm:text-sm">{key}</span>
               </div>
             </Button>
+          ))}
+        </div>
+
+        {/* highlights strip */}
+        <div className="mt-6 grid w-full max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
+          {highlights.map(({ value, label, color, icon: Icon }) => (
+            <div
+              key={label}
+              className="border-border flex flex-col items-center gap-1 rounded-2xl border bg-white/30 px-3 py-4 text-center backdrop-blur-lg dark:bg-neutral-800"
+            >
+              <Icon size={18} strokeWidth={2} color={color} />
+              <span className="text-foreground text-2xl font-semibold">
+                {value}
+              </span>
+              <span className="text-muted-foreground text-xs">{label}</span>
+            </div>
           ))}
         </div>
       </motion.div>

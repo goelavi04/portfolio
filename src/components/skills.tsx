@@ -3,7 +3,18 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import { BarChart3, Code, Server, Users } from 'lucide-react';
+import { BarChart3, Code, Server, Sparkles, Users } from 'lucide-react';
+
+// Skills actually used in a shipped project (cross-referenced against the
+// tech stacks listed in the Projects section) get a "shipped" highlight.
+const SHIPPED_SKILLS = new Set([
+  'Python',
+  'FastAPI',
+  'React',
+  'LangGraph',
+  'GNNs',
+  'Docker Compose',
+]);
 
 const Skills = () => {
   const skillsData = [
@@ -110,6 +121,10 @@ const Skills = () => {
           <CardTitle className="text-primary px-0 text-4xl font-bold">
             Skills & Expertise
           </CardTitle>
+          <p className="text-muted-foreground flex items-center gap-1.5 pt-2 text-sm">
+            <Sparkles className="h-3.5 w-3.5" />
+            Highlighted skills have shipped in a project below
+          </p>
         </CardHeader>
 
         <CardContent className="px-0">
@@ -138,20 +153,29 @@ const Skills = () => {
                   initial="hidden"
                   animate="visible"
                 >
-                  {section.skills.map((skill, idx) => (
-                    <motion.div
-                      key={idx}
-                      variants={badgeVariants}
-                      whileHover={{
-                        scale: 1.04,
-                        transition: { duration: 0.2 },
-                      }}
-                    >
-                      <Badge className={`border px-3 py-1.5 font-normal`}>
-                        {skill}
-                      </Badge>
-                    </motion.div>
-                  ))}
+                  {section.skills.map((skill, idx) => {
+                    const shipped = SHIPPED_SKILLS.has(skill);
+                    return (
+                      <motion.div
+                        key={idx}
+                        variants={badgeVariants}
+                        whileHover={{
+                          scale: 1.04,
+                          transition: { duration: 0.2 },
+                        }}
+                      >
+                        <Badge
+                          className={
+                            shipped
+                              ? `border px-3 py-1.5 font-medium ${section.color} ring-1 ring-current/20`
+                              : 'border-border bg-transparent px-3 py-1.5 font-normal text-muted-foreground'
+                          }
+                        >
+                          {skill}
+                        </Badge>
+                      </motion.div>
+                    );
+                  })}
                 </motion.div>
               </motion.div>
             ))}
