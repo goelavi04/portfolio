@@ -39,8 +39,8 @@ const questionConfig = [
 /* ---------- highlights strip data ---------- */
 const highlights = [
   { value: '9.1', label: 'CGPA', color: '#B95F9D', icon: GraduationCap },
-  { value: '15+', label: 'Projects on GitHub', color: '#329696', icon: Github },
-  { value: '4', label: 'Live shipped projects', color: '#3E9858', icon: Layers },
+  { value: '30+', label: 'Projects on GitHub', color: '#329696', icon: Github },
+  { value: '12+', label: 'Live shipped projects', color: '#3E9858', icon: Layers },
   { value: '5+', label: 'Hackathons', color: '#C19433', icon: Trophy },
 ] as const;
 
