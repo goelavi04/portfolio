@@ -39,7 +39,7 @@ export async function POST(req: Request) {
     };
 
     const result = streamText({
-      model: groq('llama-3.3-70b-versatile'),
+      model: groq('meta-llama/llama-4-scout-17b-16e-instruct'),
       messages,
       toolCallStreaming: true,
       tools,
