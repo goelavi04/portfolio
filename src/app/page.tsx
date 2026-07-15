@@ -7,10 +7,11 @@ import { motion } from 'framer-motion';
 import {
   ArrowRight,
   BriefcaseBusiness,
+  Github,
   GraduationCap,
-  Languages,
   Laugh,
   Layers,
+  Linkedin,
   Trophy,
   UserRoundSearch,
 } from 'lucide-react';
@@ -38,9 +39,15 @@ const questionConfig = [
 /* ---------- highlights strip data ---------- */
 const highlights = [
   { value: '9.1', label: 'CGPA', color: '#B95F9D', icon: GraduationCap },
-  { value: '11', label: 'Indic languages in TTS work', color: '#329696', icon: Languages },
+  { value: '15+', label: 'Projects on GitHub', color: '#329696', icon: Github },
   { value: '4', label: 'Live shipped projects', color: '#3E9858', icon: Layers },
   { value: '5+', label: 'Hackathons', color: '#C19433', icon: Trophy },
+] as const;
+
+/* ---------- social links ---------- */
+const socialLinks = [
+  { href: 'https://github.com/goelavi04', label: 'GitHub', icon: Github },
+  { href: 'https://linkedin.com/in/aviral-goel04', label: 'LinkedIn', icon: Linkedin },
 ] as const;
 
 /* ---------- component ---------- */
@@ -91,6 +98,22 @@ export default function Home() {
 
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pb-10 md:pb-20">
+      {/* social links */}
+      <div className="absolute top-4 right-4 z-20 flex gap-2 sm:top-6 sm:right-6">
+        {socialLinks.map(({ href, label, icon: Icon }) => (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+            className="border-border hover:bg-border/30 flex h-9 w-9 items-center justify-center rounded-full border bg-white/30 backdrop-blur-lg transition-colors dark:bg-neutral-800"
+          >
+            <Icon size={17} strokeWidth={2} className="text-gray-700 dark:text-neutral-200" />
+          </a>
+        ))}
+      </div>
+
       {/* big blurred footer word */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center overflow-hidden">
         <div
