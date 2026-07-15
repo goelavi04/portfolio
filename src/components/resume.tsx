@@ -20,7 +20,7 @@ export function Resume() {
     // Create a link element
     const link = document.createElement('a');
     link.href = resumeDetails.downloadUrl;
-    link.download = resumeDetails.downloadUrl.split('/').pop() || 'resume.pdf';
+    link.download = 'Aviral Goel Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
