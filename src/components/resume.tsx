@@ -12,7 +12,7 @@ export function Resume() {
     description: 'AI/ML Engineer • Speech AI & Agentic Systems',
     fileType: 'PDF',
     lastUpdated: 'Jul 2026',
-    previewImageSrc: '/resume_aviral_preview.png',
+    previewImageSrc: '/profil-aviral.jpg',
     downloadUrl: '/resume_aviral.pdf',
   };
 
@@ -39,17 +39,26 @@ export function Resume() {
         {/* Details area (bottom part) */}
         <div className="p-5">
           <div className="flex items-center justify-between">
-            <div>
-              <h3 className="text-lg font-medium text-foreground">
-                {resumeDetails.title}
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                {resumeDetails.description}
-              </p>
-              <div className="mt-1 flex text-xs text-muted-foreground">
-                <span>{resumeDetails.fileType}</span>
-                <span className="mx-2">•</span>
-                <span>Updated {resumeDetails.lastUpdated}</span>
+            <div className="flex items-center gap-4">
+              <Image
+                src={resumeDetails.previewImageSrc}
+                alt={resumeDetails.title}
+                width={48}
+                height={48}
+                className="h-12 w-12 shrink-0 rounded-full object-cover"
+              />
+              <div>
+                <h3 className="text-lg font-medium text-foreground">
+                  {resumeDetails.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {resumeDetails.description}
+                </p>
+                <div className="mt-1 flex text-xs text-muted-foreground">
+                  <span>{resumeDetails.fileType}</span>
+                  <span className="mx-2">•</span>
+                  <span>Updated {resumeDetails.lastUpdated}</span>
+                </div>
               </div>
             </div>
 
