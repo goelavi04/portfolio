@@ -254,7 +254,7 @@ export const Card = ({
                   </motion.p>
                   <motion.p
                     layoutId={layout ? `title-${card.title}` : undefined}
-                    className="mt-4 text-2xl font-semibold text-neutral-700 md:text-5xl dark:text-white"
+                    className="mt-4 text-2xl font-semibold break-words text-neutral-700 md:text-5xl dark:text-white"
                   >
                     {card.title}
                   </motion.p>
@@ -274,16 +274,16 @@ export const Card = ({
       >
         <div className="absolute inset-x-0 top-0 z-30 h-full cursor-pointer bg-gradient-to-b from-black hover:scale-110 via-transparent to-transparent" />
         {/*<div className="absolute inset-0 z-20 cursor-pointer bg-black/20 hover:bg-black/2" />*/}
-        <div className="relative z-40 p-8">
+        <div className="relative z-40 w-full p-6">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-left font-sans text-sm font-medium text-white md:text-base"
+            className="text-left font-sans text-sm font-medium break-words text-white md:text-base"
           >
             {card.category}
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="max-w-xs text-left font-sans text-xl font-semibold [text-wrap:balance] text-white md:text-3xl"
+            className="mt-1 line-clamp-3 text-left font-sans text-xl leading-tight font-semibold break-words hyphens-auto text-white md:text-2xl"
           >
             {card.title}
           </motion.p>

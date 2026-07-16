@@ -72,6 +72,97 @@ const PROJECT_CONTENT = [
       },
     ],
   },
+  {
+    title: 'NoteFlow',
+    description:
+      'AI-powered tool that turns YouTube videos into structured notes. Fetches the transcript, chunks it map-reduce style, and runs it through a BART abstractive summarization model to produce a summary plus a navigable, timestamped highlight timeline.',
+    techStack: ['FastAPI', 'HuggingFace (BART)', 'youtube-transcript-api', 'JavaScript'],
+    date: 'Jun 2026',
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/goelavi04/video-note-extractor',
+      },
+    ],
+  },
+  {
+    title: 'CodeMesh',
+    description:
+      'GraphRAG system that analyzes Python GitHub repositories by mapping files, functions, and imports into a knowledge graph. Combines vector embeddings with structural graph traversal so questions like "where is the auth logic?" get semantically and architecturally grounded answers with source citations.',
+    techStack: ['FastAPI', 'NetworkX', 'Sentence-Transformers', 'Pinecone', 'OpenRouter'],
+    date: 'Jun 2026',
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/goelavi04/codebase-knowledge-ai',
+      },
+    ],
+  },
+  {
+    title: 'AI Data Copilot',
+    description:
+      'Fully local data-quality analyzer for CSV files. Detects missing values, duplicates, type mismatches, and statistical outliers with Pandas, then explains each issue in plain English using a locally-run TinyLlama model via LangChain — no cloud APIs, data never leaves the machine.',
+    techStack: ['FastAPI', 'Pandas', 'LangChain', 'TinyLlama'],
+    date: 'May 2026',
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/goelavi04/ai-data-copilot',
+      },
+    ],
+  },
+  {
+    title: 'AI Digest Agent',
+    description:
+      'Automated pipeline that scrapes 7 RSS feeds for AI/tech news every morning, uses Llama 3.3 to rank and summarize the top 20 stories, builds a styled HTML digest, and emails it via Gmail — fully scheduled and hands-off through GitHub Actions.',
+    techStack: ['Python', 'Groq (Llama 3.3)', 'feedparser', 'GitHub Actions'],
+    date: 'Mar 2026',
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/goelavi04/ai-digest-agent',
+      },
+    ],
+  },
+  {
+    title: 'Credit Risk Predictor',
+    description:
+      'ML pipeline predicting credit card default risk on 30,000 real customer records from the UCI dataset. Engineered behavioral features (payment delay, payment-to-bill ratio) that outperformed raw demographics; a Random Forest model reached 82.4% accuracy and 0.80 ROC-AUC, with SHAP for explainability.',
+    techStack: ['Python', 'Scikit-learn', 'Pandas', 'SHAP'],
+    date: 'Feb 2026',
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/goelavi04/Predictive-Financial-Modeling-for-Economic-Inclusion',
+      },
+    ],
+  },
+  {
+    title: 'InternHunt',
+    description:
+      'Automated agent that scrapes Internshala daily for internship listings, filters them for relevant AI/ML and Data Science roles using Llama 3.3, and emails a formatted HTML digest every day with direct links to matching listings.',
+    techStack: ['Python', 'BeautifulSoup4', 'Groq (Llama 3.3)', 'Gmail SMTP'],
+    date: 'Mar 2026',
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/goelavi04/InternHunt',
+      },
+    ],
+  },
+  {
+    title: 'EV Charging Anomaly Detection',
+    description:
+      'Full-stack ML app that flags fraud, DoS attacks, energy spikes, and idle abuse in EV charging sessions using a custom-engineered Decision Tree classifier, trained on 148K+ real sessions from Boulder, CO (2018-2023). Ships with a React dashboard for CSV uploads, live stats, filterable tables, and alert panels.',
+    techStack: ['FastAPI', 'scikit-learn', 'React', 'TypeScript', 'Supabase'],
+    date: 'May 2026',
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/goelavi04/ev-charging-anomaly-detection',
+      },
+    ],
+  },
 ];
 
 // Define interface for project prop
@@ -180,5 +271,47 @@ export const data = [
     content: (
       <ProjectContent project={{ title: 'Driver Drowsiness Detection System' }} />
     ),
+  },
+  {
+    category: 'AI + NLP',
+    title: 'NoteFlow',
+    src: '/project-noteflow.svg',
+    content: <ProjectContent project={{ title: 'NoteFlow' }} />,
+  },
+  {
+    category: 'GraphRAG',
+    title: 'CodeMesh',
+    src: '/project-codemesh.svg',
+    content: <ProjectContent project={{ title: 'CodeMesh' }} />,
+  },
+  {
+    category: 'Local AI',
+    title: 'AI Data Copilot',
+    src: '/project-datacopilot.svg',
+    content: <ProjectContent project={{ title: 'AI Data Copilot' }} />,
+  },
+  {
+    category: 'Automation Agent',
+    title: 'AI Digest Agent',
+    src: '/project-digestagent.svg',
+    content: <ProjectContent project={{ title: 'AI Digest Agent' }} />,
+  },
+  {
+    category: 'ML + FinTech',
+    title: 'Credit Risk Predictor',
+    src: '/project-creditrisk.svg',
+    content: <ProjectContent project={{ title: 'Credit Risk Predictor' }} />,
+  },
+  {
+    category: 'Automation Agent',
+    title: 'InternHunt',
+    src: '/project-internhunt.svg',
+    content: <ProjectContent project={{ title: 'InternHunt' }} />,
+  },
+  {
+    category: 'ML + Full-Stack',
+    title: 'EV Charging Anomaly Detection',
+    src: '/project-evanomaly.svg',
+    content: <ProjectContent project={{ title: 'EV Charging Anomaly Detection' }} />,
   },
 ];

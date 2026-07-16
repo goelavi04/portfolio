@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import {
   ArrowRight,
   BriefcaseBusiness,
+  Download,
   Github,
   GraduationCap,
   Laugh,
@@ -59,6 +60,15 @@ export default function Home() {
   const goToChat = (query: string) =>
     router.push(`/chat?query=${encodeURIComponent(query)}`);
 
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/resume_aviral.pdf';
+    link.download = 'Aviral Goel Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   /* hero animations (unchanged) */
   const topElementVariants = {
     hidden: { opacity: 0, y: -60 },
@@ -98,8 +108,20 @@ export default function Home() {
 
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pb-10 md:pb-20">
-      {/* social links */}
+      {/* social links + resume download */}
       <div className="absolute top-4 right-4 z-20 flex gap-2 sm:top-6 sm:right-6">
+        <button
+          type="button"
+          onClick={downloadResume}
+          aria-label="Download Resume"
+          title="Download Resume"
+          className="border-border hover:bg-border/30 flex h-9 items-center gap-1.5 rounded-full border bg-white/30 px-3 backdrop-blur-lg transition-colors dark:bg-neutral-800"
+        >
+          <Download size={17} strokeWidth={2} className="text-gray-700 dark:text-neutral-200" />
+          <span className="hidden text-sm font-medium text-gray-700 sm:inline dark:text-neutral-200">
+            Resume
+          </span>
+        </button>
         {socialLinks.map(({ href, label, icon: Icon }) => (
           <a
             key={label}

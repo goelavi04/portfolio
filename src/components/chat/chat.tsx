@@ -2,7 +2,7 @@
 import { useChat } from '@ai-sdk/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { toast } from 'sonner';
 
@@ -16,7 +16,7 @@ import {
   ChatBubbleMessage,
 } from '@/components/ui/chat/chat-bubble';
 import WelcomeModal from '@/components/welcome-modal';
-import { Info } from 'lucide-react';
+import { ArrowLeft, Info } from 'lucide-react';
 import HelperBoost from './HelperBoost';
 
 // ClientOnly component for client-side rendering
@@ -118,6 +118,7 @@ const MOTION_CONFIG = {
 
 const Chat = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const router = useRouter();
   const searchParams = useSearchParams();
   const initialQuery = searchParams.get('query');
   const [autoSubmitted, setAutoSubmitted] = useState(false);
@@ -277,6 +278,18 @@ const Chat = () => {
 
   return (
     <div className="relative h-screen overflow-hidden">
+      <div className="absolute top-6 left-4 z-51 flex items-center justify-center sm:left-8">
+        <button
+          type="button"
+          onClick={() => router.push('/')}
+          aria-label="Back to home"
+          className="hover:bg-accent flex cursor-pointer items-center gap-1.5 rounded-2xl px-3 py-1.5 text-sm font-medium text-accent-foreground transition-colors"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          <span className="hidden sm:inline">Back</span>
+        </button>
+      </div>
+
       <div className="absolute top-6 right-8 z-51 flex flex-col-reverse items-center justify-center gap-1 md:flex-row">
         <WelcomeModal
           trigger={
