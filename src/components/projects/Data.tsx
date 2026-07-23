@@ -163,6 +163,49 @@ const PROJECT_CONTENT = [
       },
     ],
   },
+  {
+    title: "Leela's Library",
+    description:
+      'Family library catalog web app for a private collection of 960+ books — search availability, track which shelf a book lives on, and manage borrow/return with due dates. Admins bulk-import books from spreadsheets or PDFs, promote/demote users, and see which searches turned up nothing. Built with Server Actions instead of a separate REST layer, with Supabase handling Postgres, auth, and cover-image storage.',
+    techStack: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
+    date: 'Jul 2026',
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/goelavi04/leelas-library',
+      },
+      {
+        name: 'Live',
+        url: 'https://leelas-library.vercel.app',
+      },
+    ],
+  },
+  {
+    title: 'RAG Application',
+    description:
+      'Retrieval-augmented Q&A app that answers questions using only a supplied document, not model training data. Text is chunked and embedded locally with sentence-transformers, indexed in Pinecone, and top-matching chunks are retrieved by cosine similarity to ground an LLM response via OpenRouter.',
+    techStack: ['FastAPI', 'sentence-transformers', 'Pinecone', 'OpenRouter'],
+    date: 'Mar 2026',
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/goelavi04/Rag-application',
+      },
+    ],
+  },
+  {
+    title: 'Solar Panel Fault Detection',
+    description:
+      'Deep learning image classifier that automates visual inspection of solar panels, sorting photos into six conditions (clean, dusty, bird-drop, snow-covered, electrical damage, physical damage) to enable maintenance-driven monitoring at scale. Fine-tuned MobileNetV2 with a custom classification head using a two-phase transfer learning strategy, reaching 77% accuracy on an imbalanced 869-image dataset.',
+    techStack: ['Python', 'TensorFlow', 'Keras', 'MobileNetV2'],
+    date: 'Apr 2026',
+    links: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/goelavi04/solar_panel_dl',
+      },
+    ],
+  },
 ];
 
 // Define interface for project prop
@@ -313,5 +356,23 @@ export const data = [
     title: 'EV Charging Anomaly Detection',
     src: '/project-evanomaly.svg',
     content: <ProjectContent project={{ title: 'EV Charging Anomaly Detection' }} />,
+  },
+  {
+    category: 'Full-Stack Web App',
+    title: "Leela's Library",
+    src: '/project-leelaslibrary.svg',
+    content: <ProjectContent project={{ title: "Leela's Library" }} />,
+  },
+  {
+    category: 'AI + RAG',
+    title: 'RAG Application',
+    src: '/project-ragapplication.svg',
+    content: <ProjectContent project={{ title: 'RAG Application' }} />,
+  },
+  {
+    category: 'Deep Learning',
+    title: 'Solar Panel Fault Detection',
+    src: '/project-solarpanel.svg',
+    content: <ProjectContent project={{ title: 'Solar Panel Fault Detection' }} />,
   },
 ];
