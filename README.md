@@ -2,7 +2,7 @@
 
 An interactive, AI-chat-driven portfolio. Instead of scrolling, visitors ask questions and an AI avatar answers using my real background, skills, experience, and projects.
 
-Built on the [toukoum/portfolio](https://github.com/toukoum/portfolio) template, customized with my own content and switched to run on [Groq](https://groq.com) (Llama 4 Scout) instead of OpenAI.
+Built on the [toukoum/portfolio](https://github.com/toukoum/portfolio) template, customized with my own content and switched to run on [Groq](https://groq.com) (GPT-OSS 120B) instead of OpenAI.
 
 ## How to run
 
